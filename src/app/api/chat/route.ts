@@ -10,7 +10,7 @@ export async function POST(req: Request) {
 	const response = await openai.chat.completions.create({
 		model: "gpt-3.5-turbo",
 		messages: messages,
-		max_tokens: 300,
+		max_tokens: 100,
 	});
 	return new Response(JSON.stringify(response));
 }
