@@ -8,6 +8,7 @@ import {
 } from "react-icons/io5";
 import { MdOutlineHealthAndSafety } from "react-icons/md";
 import { GrPowerReset } from "react-icons/gr";
+import { TbNurse } from "react-icons/tb";
 
 interface Message {
 	role: string;
@@ -69,7 +70,7 @@ export default function ChatBox() {
 
 	return (
 		<div className='flex items-center justify-center w-full'>
-			<div className='m-2 w-[400px] h-[600px] border flex flex-col rounded-t-xl'>
+			<div className='m-2 w-[400px] h-[400px] border flex flex-col rounded-t-xl'>
 				<header className='w-full bg-primary-500 flex justify-between px-2 py-1 rounded-t-lg items-center'>
 					<h2 className='text-sm font-semibold text-white flex items-center'>
 						<MdOutlineHealthAndSafety className='mr-2 w-6 h-6' />
@@ -77,7 +78,7 @@ export default function ChatBox() {
 					</h2>
 					<div className='flex space-x-2'>
 						<button onClick={newChat} title='New Chat'>
-							<GrPowerReset className='w-6 h-6 text-white' />
+							<GrPowerReset className='w-6 h-6 text-white transition-transform duration-300 hover:scale-90 hover:rotate-90 ' />
 						</button>
 					</div>
 				</header>
@@ -89,8 +90,8 @@ export default function ChatBox() {
 						if (msg.role === "assistant") {
 							return (
 								<div key={index} className={`flex items-end ${extraMargin}`}>
-									<div className='rounded bg-primary-500 w-8 aspect-square p-1.5'>
-										<IoChatbubbleEllipsesOutline className='w-full h-full text-white' />
+									<div className='flex justify-center items-center rounded bg-primary-500 w-6 h-6 aspect-square p-1.5'>
+										<TbNurse className='w-4 h-4 text-white' />
 									</div>
 									<p className='mx-2 p-2 rounded bg-blue-50 leading-4 text-sm text-gray-800'>
 										{msg.content}
@@ -102,8 +103,8 @@ export default function ChatBox() {
 								<div
 									key={index}
 									className={`flex items-end flex-row-reverse ${extraMargin}`}>
-									<div className='rounded bg-primary-500 w-8 aspect-square p-1.5'>
-										<IoPersonCircleOutline className='w-full h-full text-white' />
+									<div className=' flex justify-center items-center rounded bg-primary-500 w-6 h-6 aspect-square p-1.5'>
+										<IoPersonCircleOutline className='w-4 h-4 text-white' />
 									</div>
 									<p className='mx-2 p-2 rounded bg-gray-200 leading-4 text-sm text-gray-800'>
 										{msg.content}
@@ -123,17 +124,16 @@ export default function ChatBox() {
 						value={userInput}
 						onChange={onChange}
 						onKeyDown={onKeyDown}
-						className='flex-grow mx-2 p-2.5 text-sm text-gray-900 bg-white rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500'
+						className='flex-grow mx-2 p-2.5 text-sm max-h-16 text-gray-900 bg-white rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 '
 					/>
 					<button
 						onClick={handleSubmit}
 						type='submit'
 						className='flex justify-center items-center aspect-square h-9 bg-primary-500  p-2 text-white rounded-full cursor-pointer hover:bg-primary-700'>
-						<IoChatbubbleEllipsesOutline className='w-6 h-6' />
+						<IoChatbubbleEllipsesOutline className='w-6 h-6 text-white' />
 					</button>
 				</div>
 			</div>
 		</div>
 	);
 }
-//

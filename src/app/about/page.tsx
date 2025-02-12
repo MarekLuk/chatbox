@@ -11,12 +11,12 @@ export default function AboutPage() {
 				initial={{ opacity: 0, y: 20 }}
 				animate={{ opacity: 1, y: 0 }}
 				transition={{ duration: 0.6 }}
-				className='w-full max-w-6xl bg-white rounded-2xl shadow-2xl overflow-hidden flex flex-col md:flex-row'>
-				<div className='md:w-1/2 p-10 bg-gradient-to-b from-indigo-50 to-blue-50 flex flex-col justify-center items-center'>
+				className='w-full max-w-6xl bg-white rounded-2xl shadow-2xl overflow-hidden flex flex-col md:flex-row mt-8'>
+				<div className='md:w-1/2 p-8 bg-gradient-to-b from-indigo-50 to-blue-50 flex flex-col justify-center items-center'>
 					<div className='flex items-center justify-center mb-8'>
 						<MdLocalHospital className='w-16 h-16 text-primary-500 animate-pulse' />
 					</div>
-					<h1 className='text-4xl font-bold text-gray-800 mb-2 text-center'>
+					<h1 className='text-4xl font-bold text-gray-800 mb-4 text-center'>
 						About MarCare
 					</h1>
 					<p className='text-center text-gray-600 text-lg'>

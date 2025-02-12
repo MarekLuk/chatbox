@@ -11,7 +11,7 @@ export default function ChatPage() {
 				initial={{ opacity: 0, y: 20 }}
 				animate={{ opacity: 1, y: 0 }}
 				transition={{ duration: 0.6 }}
-				className='w-full max-w-6xl bg-white rounded-2xl shadow-2xl overflow-hidden flex flex-col md:flex-row'>
+				className='w-full max-w-6xl bg-white rounded-2xl shadow-2xl overflow-hidden flex flex-col md:flex-row mt-8'>
 				<div className='md:w-1/2 p-10 bg-gradient-to-b from-indigo-50 to-blue-50 flex flex-col justify-center'>
 					<div className='flex items-center justify-center mb-8'>
 						<MdLocalHospital className='w-16 h-16 text-primary-500 animate-pulse' />
@@ -33,7 +33,7 @@ export default function ChatPage() {
 					</div>
 				</div>
 
-				<div className='md:w-1/2 p-6 border-t md:border-t-0 md:border-l border-gray-200'>
+				<div className='md:w-1/2 p-8 border-t md:border-t-0 md:border-l border-gray-200'>
 					<ChatBox />
 				</div>
 			</motion.div>
